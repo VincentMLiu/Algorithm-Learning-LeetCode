@@ -4,28 +4,57 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Solotion {
-/**
- * 
- * 
- * 快慢角标
- * 
- * 
- * 
- * 
- * */
-	
-    public static int removeDuplicates(int[] nums) {
-        int a = 0;
+
+/**  
+* 26. Remove Duplicates from Sorted Array 
+*  link：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/description/
+*  
+*  idea：
+*  fast&slow cursor
+*  [j] is slow cursor;
+*  [i] is fast cursor;
+*  when nums[j] == nums[i], i moves on;
+*  when nums[j] != nums[i], assign the nums[i] value to nums[j+1], and j moves on.
+*  repeat above procedure till  i reach the nums.length.
+*  
+* @author VincentMLiu 
+
+* @date 2018年7月26日  
+
+*/  
+
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        int j = 0;
         if (nums == null || nums.length == 0) {
             return 0;
         }
+
         for(int i = 1; i < nums.length ;i++){
-            if (nums[a] != nums[i]) {
-              nums[++a] = nums[i];  
+            if (nums[j] != nums[i]) {
+              nums[++j] = nums[i];  
             }
         }
-        return a + 1;
+        
+        return j + 1;
+    }
+}
+
+
+public class Solotion1 {
+	
+	
+    public static void main(String[] args) throws IOException {
+        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+        String line;
+        while ((line = in.readLine()) != null) {
+            int[] nums = stringToIntegerArray(line);
+            
+            int ret = new Solution().removeDuplicates(nums);
+            String out = integerArrayToString(nums, ret);
+            
+            System.out.print(out);
+        }
     }
 	
 	
@@ -62,17 +91,4 @@ public class Solotion {
         return integerArrayToString(nums, nums.length);
     }
     
-    public static void main(String[] args) throws IOException {
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        String line;
-        while ((line = in.readLine()) != null) {
-            int[] nums = stringToIntegerArray(line);
-            
-            int ret = removeDuplicates(nums);
-            String out = integerArrayToString(nums, ret);
-            
-            System.out.print(out);
-        }
-    }
-
 }
