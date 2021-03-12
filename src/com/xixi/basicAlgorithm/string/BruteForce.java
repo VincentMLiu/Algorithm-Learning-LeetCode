@@ -45,6 +45,7 @@ public class BruteForce {
         String pattern = "GCFAA";
         int index = bruteForce(str, pattern);
         System.out.println("首次出现位置：" + index);
+        str.hashCode();
     }
 
 
