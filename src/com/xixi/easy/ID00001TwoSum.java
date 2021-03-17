@@ -57,7 +57,7 @@ public class ID00001TwoSum {
     // leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
         /**
-         * 哈希表法
+         * 哈希表法 O(n)
          *
          * @param nums
          * @param target
@@ -78,7 +78,7 @@ class Solution {
 // leetcode submit region end(Prohibit modification and deletion)
 
     /**
-     * 暴力双循环
+     * 暴力双循环O(n²)
      *     public int[] twoSum(int[] nums, int target) {
      *
      *         int[] resultNum = new int[2];

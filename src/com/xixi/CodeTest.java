@@ -13,25 +13,9 @@ public class CodeTest {
     public static void main(String[] args) {
 
 
-//        String path = "D:\\Desktop\\hosts";
-//
-//        generateInClusterIpSet(path);
+        int[] nums = {1,2,3,4,5};
 
-        System.out.println(generateAnUniqueID());
-        System.out.println(generateAnUniqueID());
-        System.out.println(generateAnUniqueID());
-        System.out.println(generateAnUniqueID());
-        System.out.println(generateAnUniqueID());
-        System.out.println(generateAnUniqueID());
-        System.out.println(generateAnUniqueID());
-
-        Map<String, Object> dd = new HashMap<String, Object>();
-
-        dd.put("id", "aa");
-        dd.put("time", 12);
-
-        System.out.println(dd.toString());
-
+        System.out.println(left_bound(nums,4));
     }
 
 
@@ -47,52 +31,22 @@ public class CodeTest {
     }
 
 
+    public static int left_bound(int[] nums, int target) {
+        if (nums.length == 0) return -1;
+        int left = 0;
+        int right = nums.length; // 注意
 
-    private static Set<String> generateInClusterIpSet(String etcHostsPath){
-
-
-        Set<String> clusterIpSet = new HashSet();
-
-        String ipRegex = "([1-9]|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])(\\.(\\d|[1-9]\\d|1\\d{2}|2[0-4]\\d|25[0-5])){3}";
-        Pattern pattern = Pattern.compile(ipRegex);
-        Matcher matcher;
-
-        File hostsFile = new File(etcHostsPath);
-        int lineNum = 0;
-
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(hostsFile));
-            String line;
-            while((line = br.readLine()) != null){
-                lineNum++;
-                line.trim();
-                if(line.isEmpty()){
-                    continue;
-                }
-                String[] lineSpli = line.split("\\s");
-                //均假设第一位为ip
-                String ip = lineSpli[0];
-
-                matcher = pattern.matcher(ip);
-
-                if(matcher.matches()){
-                    clusterIpSet.add(ip);
-                }else{
-                    System.out.println("lineNum [" + lineNum + "] The first column is not an ip :" + line);
-                }
-
+        while (left < right) { // 注意
+            int mid = (left + right) / 2;
+            if (nums[mid] == target) {
+                right = mid;
+            } else if (nums[mid] < target) {
+                left = mid + 1;
+            } else if (nums[mid] > target) {
+                right = mid; // 注意
             }
-
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
-        System.out.println(clusterIpSet);
-
-        return clusterIpSet;
-
+        return left;
     }
 
 }
