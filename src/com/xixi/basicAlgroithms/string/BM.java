@@ -1,20 +1,22 @@
 package com.xixi.basicAlgroithms.string;
 
 
+import java.util.Arrays;
+
 public class BM {
 
 
     public static void main(String[] args) {
 
-        char[] b = "cabcdjsilacab".toCharArray();
+        char[] b = "cabcab".toCharArray();
 
         int[] suffix= new int[b.length];
         boolean[] prefix= new boolean[b.length];
 
         generateGS(b,b.length,suffix,prefix);
 
-        System.out.println(suffix);
-        System.out.println(prefix);
+        System.out.println(Arrays.asList(suffix));
+        System.out.println(Arrays.asList(prefix));
 
     }
 

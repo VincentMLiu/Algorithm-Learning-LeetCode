@@ -1,4 +1,4 @@
-package com.xixi.basicAlgorithm.string;
+package com.xixi.basicAlgroithms.string;
 
 public class BruteForce {
 
