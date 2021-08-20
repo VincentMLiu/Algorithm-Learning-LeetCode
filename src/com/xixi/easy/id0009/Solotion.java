@@ -14,6 +14,7 @@ public class Solotion {
 			return true;
 		int rev = 0;
 		int pro = x;
+		//将数据倒置，如果等于原来的数x就是回文，不等于就不是
 		while (pro > 0) {
 			rev = rev * 10 + pro % 10;
 			pro /= 10;
