@@ -53,6 +53,15 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/com/xixi/leetcode/editor/cn/ID00083RemoveDuplicatesFromSortedList.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/com/xixi/leetcode/editor/cn/doc/content/ID00083RemoveDuplicatesFromSortedList.md" />
+              <option name="path" value="$PROJECT_DIR$/src/com/xixi/leetcode/editor/cn/ID00083RemoveDuplicatesFromSortedList.java" />
+              <option name="questionId" value="83" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/com/xixi/leetcode/editor/cn/ID00125ValidPalindrome.java">
           <value>
             <LeetcodeEditor>
@@ -78,11 +87,29 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/com/xixi/leetcode/editor/cn/ID00876MiddleOfTheLinkedList.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/com/xixi/leetcode/editor/cn/doc/content/ID00876MiddleOfTheLinkedList.md" />
+              <option name="path" value="$PROJECT_DIR$/src/com/xixi/leetcode/editor/cn/ID00876MiddleOfTheLinkedList.java" />
+              <option name="questionId" value="876" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/com/xixi/leetcode/editor/cn/ID01108DefangingAnIpAddress.java">
           <value>
             <LeetcodeEditor>
               <option name="path" value="$PROJECT_DIR$/src/com/xixi/leetcode/editor/cn/ID01108DefangingAnIpAddress.java" />
               <option name="questionId" value="1205" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/xixi/leetcode/editor/cn/ID剑指 Offer 25HeBingLiangGePaiXuDeLianBiaoLcof.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/com/xixi/leetcode/editor/cn/doc/content/ID剑指 Offer 25HeBingLiangGePaiXuDeLianBiaoLcof.md" />
+              <option name="path" value="$PROJECT_DIR$/src/com/xixi/leetcode/editor/cn/ID剑指 Offer 25HeBingLiangGePaiXuDeLianBiaoLcof.java" />
+              <option name="questionId" value="剑指 Offer 25" />
             </LeetcodeEditor>
           </value>
         </entry>
